@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="w-full flex flex-col font-mono overflow-hidden">
+      <div className="w-full flex flex-col font-poppins overflow-hidden">
         <Nav toggle={toggle} setToggle={setToggle} />
         <div className="mt-0 flex bg-gray-200">
           <FloatLeft toggle={toggle} />
