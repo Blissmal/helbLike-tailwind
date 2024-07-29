@@ -4,7 +4,7 @@ import propTypes from "prop-types"
 const CardHome = ({ text, divColor, logo }) => {
   return (
     <div className="m-0 w-full lg:max-w-[350px] flex flex-col items-center p-3 bg-gray-200 h-fit mb-0 hover:scale-105 transform transition duration-300 ease-in-out">
-      <div className="flex flex-col relative items-center w-full max-w-full bg-white shadow-lg rounded-md p-6">
+      <div className="flex flex-col relative items-center w-full max-w-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 ease-in-out rounded-md p-6">
         <h2 className="text-lg font-bold text-blue-600 cursor-pointer">{text}</h2>
         <div className="absolute md:top-[50px] top-6 right-10">
           {React.cloneElement(logo, { size: 40 })}

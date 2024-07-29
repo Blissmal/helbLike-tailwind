@@ -1,5 +1,5 @@
 import CardHome from "./CardHome";
-import { BiBook, BiPieChart, BiWallet } from "react-icons/bi";
+import { BiBook, BiCircle, BiPieChart, BiWallet } from "react-icons/bi";
 import { BsFillPersonBadgeFill } from "react-icons/bs";
 
 const Home = () => {
@@ -44,9 +44,12 @@ const Home = () => {
       </div>
 
       {/* Loan Application Section */}
-      <div className="w-full flex flex-col p-6 mt-6 rounded-md bg-white border border-green-600">
+      <div className="w-full hidden lg:flex flex-col mt-6 rounded-full bg-white border border-green-600 overflow-hidden">
         <div className="flex items-center justify-between">
-          <div className="text-center flex-grow mx-4">
+          <div className="w-28 bg-red-700 h-[100px] relative">
+            <div className="w-10 h-10 border-2 bg-white border-white absolute right-9 top-7 rounded-full"/>
+          </div>
+          <div className="text-left flex-grow mx-4">
             <p className="text-lg font-bold text-blue-600">
               PROCEED TO APPLYING HELB STUDENT LOAN!
             </p>
