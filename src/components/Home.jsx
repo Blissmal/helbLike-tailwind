@@ -1,5 +1,5 @@
 import CardHome from "./CardHome";
-import { BiBook, BiCircle, BiPieChart, BiWallet } from "react-icons/bi";
+import { BiBook, BiCircle, BiPieChart, BiPlay, BiWallet } from "react-icons/bi";
 import { BsFillPersonBadgeFill } from "react-icons/bs";
 
 const Home = () => {
@@ -49,11 +49,12 @@ const Home = () => {
           <div className="w-28 bg-red-700 h-[100px] relative">
             <div className="w-10 h-10 border-2 bg-white border-white absolute right-9 top-7 rounded-full"/>
           </div>
-          <div className="text-left flex-grow mx-4">
-            <p className="text-lg font-bold text-blue-600">
+          <div className="text-left flex-grow mx-4 relative">
+            <BiPlay className="absolute -left-[25px]" size={30}/>
+            <p className="text-lg font-bold">
               PROCEED TO APPLYING HELB STUDENT LOAN!
             </p>
-            <p className="text-sm text-blue-600">
+            <p className="text-sm">
               You MUST APPLY for HELB STUDENT LOAN by selecting one of the Loan Product(s) below to access funds for meeting your program cost.
             </p>
           </div>
