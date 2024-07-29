@@ -1,5 +1,5 @@
 import CardHome from "./CardHome";
-import { BiBook, BiPieChart, BiPlay, BiWallet } from "react-icons/bi";
+import { BiBook, BiBullseye, BiPieChart, BiPlay, BiWallet } from "react-icons/bi";
 import { BsFillPersonBadgeFill } from "react-icons/bs";
 import { FiArrowUp } from "react-icons/fi";
 
@@ -47,8 +47,9 @@ const Home = () => {
       {/* Loan Application Section */}
       <div className="w-full hidden lg:flex flex-col mt-6 rounded-full bg-white border border-green-600 overflow-hidden">
         <div className="flex items-center justify-between">
-          <div className="w-28 bg-red-700 h-[100px] relative">
-            <div className="w-10 h-10 border-2 bg-white border-white absolute right-9 top-7 rounded-full" />
+          <div className="w-28 bg-red-700 h-[100px] relative flex items-center justify-center">
+            {/* <div className="w-10 h-10 border-2 bg-white border-white absolute right-9 top-7 rounded-full" /> */}
+            <BiBullseye color="white" className="z-10" size={40}/>
           </div>
           <div className="text-left flex-grow mx-4 relative">
             <BiPlay className="absolute -left-[25px]" size={30}/>
