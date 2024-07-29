@@ -81,7 +81,7 @@ const Home = () => {
                 <td className="px-4 py-2 whitespace-nowrap">2024/2025</td>
                 <td className="px-4 py-2 whitespace-nowrap">31st-Dec-2024</td>
                 <td className="px-4 py-2 whitespace-nowrap">
-                  <button className=" hover:bg-green-500 bg-green-600 text-white px-4 py-1 rounded-full transition-colors duration-300">Open</button>
+                  <button className=" hover:bg-green-500 bg-green-600 text-white px-6 py-1 rounded-full transition-colors duration-300">Open</button>
                 </td>
               </tr>
             </tbody>
