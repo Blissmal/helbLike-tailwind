@@ -1,5 +1,5 @@
 import CardHome from "./CardHome";
-import { BiBook, BiCircle, BiPieChart, BiPlay, BiWallet } from "react-icons/bi";
+import { BiBook, BiPieChart, BiPlay, BiWallet } from "react-icons/bi";
 import { BsFillPersonBadgeFill } from "react-icons/bs";
 
 const Home = () => {
