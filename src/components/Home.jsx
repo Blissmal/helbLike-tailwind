@@ -16,7 +16,7 @@ const Home = () => {
 
       {/* Notification Section */}
       <div className="w-full flex flex-col justify-center items-center rounded-md p-6 bg-white border border-green-600 text-center">
-        <h2 className="text-xl text-gray-600 border-b border-gray-400 pb-2 mb-4">
+        <h2 className="text-xl text-gray-600 border-b border-gray-400 pb-2 mb-4 w-full">
           DEAR <span className="font-bold">BETHUEL</span>, YOU HAVE{" "}
           <span className="font-bold">
             NOT CHECKED OR SELECTED{" "}
