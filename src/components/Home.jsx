@@ -1,6 +1,7 @@
 import CardHome from "./CardHome";
 import { BiBook, BiPieChart, BiPlay, BiWallet } from "react-icons/bi";
 import { BsFillPersonBadgeFill } from "react-icons/bs";
+import { FiArrowUp } from "react-icons/fi";
 
 const Home = () => {
   return (
@@ -36,7 +37,7 @@ const Home = () => {
       {/* Profile Completion Section */}
       <div className="w-full flex flex-col justify-center items-center rounded-md p-6 bg-white border border-green-600 text-center">
         <p className="text-md">
-          Your Profile is <span className="text-green-600 font-bold">100% complete!</span>
+          Your Profile is <FiArrowUp className="inline-block" color="red"/> <span className="text-red-600 font-bold">100%</span> Complete!
         </p>
         <div className="w-full bg-gray-300 h-2 rounded-full mt-2">
           <div className="bg-green-600 h-2 w-full rounded-full" />
