@@ -63,7 +63,7 @@ const Home = () => {
 
       {/* Table Section */}
       <div className="w-full flex flex-col p-6 mt-6 rounded-md bg-white border border-green-600">
-        <h1 className="text-center text-xl font-semibold mb-4">Helb Loan Application - NOT Employed Category</h1>
+        <h1 className="text-center text-xl font-semibold mb-4">Helb Loan Application - <span className="text-red-600 hover:bg-red-600 hover:text-white rounded-full p-2 transition-colors duration-300 ease-in-out">NOT Employed Category</span></h1>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
