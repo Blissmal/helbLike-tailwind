@@ -1,4 +1,3 @@
-import React from "react";
 import CardHome from "./CardHome";
 import { BiBook, BiPieChart, BiWallet } from "react-icons/bi";
 import { BsFillPersonBadgeFill } from "react-icons/bs";
@@ -8,10 +7,10 @@ const Home = () => {
     <div className="flex flex-col items-center justify-start w-full p-4 space-y-6 overflow-x-hidden">
       {/* Card Section */}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <CardHome text="My Loans" divColor="bg-blue-600" logo={<BiWallet />} />
-        <CardHome text="Repay Loan" divColor="bg-orange-600" logo={<BiPieChart />} />
-        <CardHome text="HELB Student Loan Statement" divColor="bg-green-600" logo={<BsFillPersonBadgeFill />} />
-        <CardHome text="Clearance Certificate" divColor="bg-red-600" logo={<BiBook />} />
+        <CardHome text="My Loans" divColor="bg-blue-600" logo={<BiWallet color="blue" />} />
+        <CardHome text="Repay Loan" divColor="bg-orange-600" logo={<BiPieChart color="orange"/>} />
+        <CardHome text="HELB Student Loan Statement" divColor="bg-green-600" logo={<BsFillPersonBadgeFill color="green"/>} />
+        <CardHome text="Clearance Certificate" divColor="bg-red-600" logo={<BiBook color="red"/>} />
       </div>
 
       {/* Notification Section */}
