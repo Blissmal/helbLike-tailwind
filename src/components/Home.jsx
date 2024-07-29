@@ -48,7 +48,7 @@ const Home = () => {
       <div className="w-full hidden lg:flex flex-col mt-6 rounded-full bg-white border border-green-600 overflow-hidden">
         <div className="flex items-center justify-between">
           <div className="w-28 bg-red-700 h-[100px] relative">
-            <div className="w-10 h-10 border-2 bg-white border-white absolute right-9 top-7 rounded-full"/>
+            <div className="w-10 h-10 border-2 bg-white border-white absolute right-9 top-7 rounded-full" />
           </div>
           <div className="text-left flex-grow mx-4 relative">
             <BiPlay className="absolute -left-[25px]" size={30}/>
@@ -56,7 +56,7 @@ const Home = () => {
               PROCEED TO APPLYING HELB STUDENT LOAN!
             </p>
             <p className="text-sm">
-              You MUST APPLY for HELB STUDENT LOAN by selecting one of the Loan Product(s) below to access funds for meeting your program cost.
+              You <span className="font-bold">MUST APPLY</span> for HELB STUDENT LOAN by selecting one of the Loan Product(s) below to access funds for meeting your program cost.
             </p>
           </div>
         </div>
