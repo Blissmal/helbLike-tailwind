@@ -1,11 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Nav from "./components/Nav";
 import FloatLeft from "./components/FloatLeft";
 import Home from "./components/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Loader from "./components/Loader";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
+  const [load, setLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoad(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (load) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <BrowserRouter>

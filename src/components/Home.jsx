@@ -62,9 +62,9 @@ const Home = () => {
           Your Profile is <FiArrowUp className="inline-block" color="red" />{" "}
           <span className="text-red-600 font-bold">100%</span> Complete!
         </p>
-        <div className="relative w-full h-4 bg-gray-200 rounded mt-2">
+        <div className="relative w-full h-4 bg-gray-200 rounded-full mt-2">
           <div
-            className="absolute top-0 left-0 h-full bg-green-500 rounded animate-pulse"
+            className="absolute top-0 left-0 h-full bg-green-500 rounded-full animate-bounce"
             style={{ width: `100%` }}
           >
             <b>
