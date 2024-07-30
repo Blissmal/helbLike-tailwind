@@ -4,7 +4,8 @@ import FloatLeft from "./components/FloatLeft";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
-import Loans from "./pages/Loans";
+import Loans from "./pages/loans/Loans";
+import ViewLoansTab from "./pages/loans/ViewLoansTab";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/loans" element={<Loans />} />
+              <Route path="/loans/viewLoan" element={<ViewLoansTab />} />
             </Routes>
           </div>
         </div>

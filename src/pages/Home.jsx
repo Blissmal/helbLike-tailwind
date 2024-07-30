@@ -16,6 +16,7 @@ const Home = () => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <CardHome
           text="My Loans"
+          link="/loans"
           divColor="bg-blue-600"
           logo={<BiWallet color="blue" />}
         />

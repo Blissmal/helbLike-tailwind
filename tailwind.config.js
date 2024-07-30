@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "Poppins": ['Poppins', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       animation: {
         'spinner-grow': 'spinner-grow 0.75s linear infinite',
