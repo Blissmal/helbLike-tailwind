@@ -16,7 +16,7 @@ const Loans = () => {
           - My-Loans
         </span>
       </div>
-      <div className="mb-4 bg-white px-6 py-4 overflow-auto">
+      <div className="mb-4 bg-white px-6 py-4 overflow-auto rounded-md shadow-xl">
         <h3 className="text-lg font-semibold mb-4">My Loans</h3>
         <table className="w-full text-left border-collapse">
           <thead>
@@ -41,7 +41,7 @@ const Loans = () => {
               <td className="border p-2">
                 <Link
                   to="/loans/viewLoan"
-                  className="bg-red-500 text-white px-4 py-2 rounded"
+                  className="bg-red-500 text-white px-4 py-2 rounded flex items-center"
                 >
                   View Details
                 </Link>
@@ -50,7 +50,7 @@ const Loans = () => {
           </tbody>
         </table>
       </div>
-      <div className="bg-white px-6 py-4 overflow-auto">
+      <div className="bg-white px-6 py-4 overflow-auto rounded-md shadow-xl">
         <h3 className="text-lg font-semibold mb-4">My Scholarships</h3>
         <table className="w-full text-left border-collapse">
           <thead>

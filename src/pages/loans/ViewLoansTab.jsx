@@ -1,3 +1,4 @@
+import { BiPrinter } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 const ViewLoansTab = () => {
@@ -64,14 +65,16 @@ const ViewLoansTab = () => {
           - My-Loans
         </span>
       </div>
-      <div className="bg-white p-6 rounded-lg shadow">
+      <div className="bg-white p-6 rounded-lg shadow-xl overflow-auto">
         <table className="w-full text-right border border-collapse mb-4">
           <tr>
             <th className="p-2 gap-5 flex justify-end">
               <button className="text-sm font-light text-white bg-red-600 px-3 rounded-full">
+                <BiPrinter className="inline-block mr-2"/>
                 print Disbursement Report
               </button>
               <button className="text-sm font-light text-white bg-red-600 px-3 rounded-full">
+              <BiPrinter className="inline-block mr-2"/>
                 print Award Letter
               </button>
             </th>
@@ -89,7 +92,7 @@ const ViewLoansTab = () => {
               <th className="border p-2">Payment status</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-sm">
             {payments.map((payment, index) => (
               <tr key={index} className="hover:bg-gray-100">
                 <td className="border p-2">{payment.action}</td>

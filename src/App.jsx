@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
 import Loans from "./pages/loans/Loans";
 import ViewLoansTab from "./pages/loans/ViewLoansTab";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -41,6 +42,7 @@ const App = () => {
             </Routes>
           </div>
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );
