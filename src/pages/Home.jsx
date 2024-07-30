@@ -61,7 +61,7 @@ const Home = () => {
       <div className="w-full flex flex-col justify-center items-center rounded-md p-6 bg-white border border-green-600 text-center">
         <p className="text-md">
           Your Profile is <FiArrowUp className="inline-block" color="red" />{" "}
-          <span className="text-red-600 font-bold">100%</span> Complete!
+          <span className="text-red-600 font-bold text-sm">100%</span> Complete!
         </p>
         <div className="relative w-full h-4 mt-3 bg-gray-200 rounded-full overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-green-500 animate-moving-stripes">
