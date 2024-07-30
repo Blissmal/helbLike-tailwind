@@ -5,7 +5,16 @@ const Loans = () => {
     <div className="p-4">
       <div className="p-4">
         <h2 className="text-xl font-bold mb-4">My Loans and Scholarships</h2>
-        <span className="font-light text-sm"><Link to="/" className="text-blue-600 hover:text-blue-500">Dashboard</Link> - <Link to="/loans" className="text-blue-600 hover:text-blue-500">Loans</Link> - My-Loans</span>
+        <span className="font-light text-sm">
+          <Link to="/" className="text-blue-600 hover:text-blue-500">
+            Dashboard
+          </Link>{" "}
+          -{" "}
+          <Link to="/loans" className="text-blue-600 hover:text-blue-500">
+            Loans
+          </Link>{" "}
+          - My-Loans
+        </span>
       </div>
       <div className="mb-4 bg-white px-6 py-4 overflow-auto">
         <h3 className="text-lg font-semibold mb-4">My Loans</h3>
@@ -30,7 +39,10 @@ const Loans = () => {
               <td className="border p-2">2310038251</td>
               <td className="border p-2">Undergraduate Studies</td>
               <td className="border p-2">
-                <Link to="/loans/viewLoan" className="bg-red-500 text-white px-4 py-2 rounded">
+                <Link
+                  to="/loans/viewLoan"
+                  className="bg-red-500 text-white px-4 py-2 rounded"
+                >
                   View Details
                 </Link>
               </td>
