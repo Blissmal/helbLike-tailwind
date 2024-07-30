@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import Nav from "./components/Nav";
 import FloatLeft from "./components/FloatLeft";
-import Home from "./components/Home";
+import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
+import Loans from "./pages/Loans";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -34,7 +35,7 @@ const App = () => {
           <div className="flex-1 overflow-x-hidden">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/users" element={<Home />} />
+              <Route path="/loans" element={<Loans />} />
             </Routes>
           </div>
         </div>

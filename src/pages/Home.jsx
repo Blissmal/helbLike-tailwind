@@ -1,4 +1,4 @@
-import CardHome from "./CardHome";
+import CardHome from "../components/CardHome"
 import {
   BiBook,
   BiBullseye,
