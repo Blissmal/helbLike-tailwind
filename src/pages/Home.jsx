@@ -1,4 +1,4 @@
-import CardHome from "../components/CardHome"
+import CardHome from "../components/CardHome";
 import {
   BiBook,
   BiBullseye,
@@ -63,16 +63,11 @@ const Home = () => {
           Your Profile is <FiArrowUp className="inline-block" color="red" />{" "}
           <span className="text-red-600 font-bold">100%</span> Complete!
         </p>
-        <div className="relative w-full h-4 bg-gray-200 rounded-full mt-2">
-          <div
-            className="absolute top-0 left-0 h-full bg-green-500 rounded-full animate-bounce"
-            style={{ width: `100%` }}
-          >
-            <b>
-              <span className="flex justify-center items-center h-full text-white">
-                100%
-              </span>
-            </b>
+        <div className="relative w-full h-4 mt-3 bg-gray-200 rounded-full overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-green-500 animate-moving-stripes">
+            <div className="flex items-center justify-center w-full h-full text-white font-bold">
+              100%
+            </div>
           </div>
         </div>
       </div>
