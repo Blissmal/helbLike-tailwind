@@ -67,6 +67,7 @@ const ViewLoansTab = () => {
       </div>
       <div className="bg-white p-6 rounded-lg shadow-xl overflow-auto">
         <table className="w-full text-right border border-collapse mb-4">
+          <tbody>
           <tr>
             <th className="p-2 gap-5 flex justify-end">
               <button className="text-sm font-light text-white bg-red-600 px-3 rounded-full">
@@ -79,6 +80,7 @@ const ViewLoansTab = () => {
               </button>
             </th>
           </tr>
+          </tbody>
         </table>
         <table className="w-full text-left border-collapse">
           <thead>

@@ -1,19 +1,22 @@
 import { useState } from 'react';
-import { FaAndroid, FaApple, FaBeer, FaCoffee, FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
+import {FaAndroid, FaApple, FaBeer, FaCoffee, FaFacebook, FaGithub, FaHome, FaTwitter} from 'react-icons/fa';
 import propTypes from "prop-types"
 import { Link } from 'react-router-dom';
+import {FaArrowUpFromGroundWater, FaMessage} from "react-icons/fa6";
+import {MdEmail, MdMenu, MdSettings} from "react-icons/md";
+import {BiUser} from "react-icons/bi";
 
 const FloatLeft = ({ toggle }) => {
   const [selected, setSelected] = useState(null);
 
   const icons = [
-    { icon: <FaBeer size={30} color="white" />, label: "Beer", link: "/" },
-    { icon: <FaCoffee size={30} color="white" />, label: "Coffee", link: "/loans"},
-    { icon: <FaApple size={30} color="white" />, label: "Apple" },
-    { icon: <FaAndroid size={30} color="white" />, label: "Android" },
+    { icon: <FaHome size={30} color="white" />, label: "Beer", link: "/" },
+    { icon: <MdEmail size={30} color="white" />, label: "Coffee", link: "/loans"},
+    { icon: <MdMenu size={30} color="white" />, label: "Apple" },
+    { icon: <BiUser size={30} color="white" />, label: "Android" },
     { icon: <FaGithub size={30} color="white" />, label: "Github" },
-    { icon: <FaTwitter size={30} color="white" />, label: "Twitter" },
-    { icon: <FaFacebook size={30} color="white" />, label: "Facebook" },
+    { icon: <FaArrowUpFromGroundWater size={30} color="white" />, label: "Twitter" },
+    { icon: <MdSettings size={30} color="white" />, label: "Facebook" },
   ];
 
   const handleClick = (index) => {
