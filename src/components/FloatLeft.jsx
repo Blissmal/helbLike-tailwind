@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaGithub, FaHome } from 'react-icons/fa';
+import {FaCode, FaHome} from 'react-icons/fa';
 import propTypes from "prop-types"
 import { Link } from 'react-router-dom';
 import { FaArrowUpFromGroundWater } from "react-icons/fa6";
@@ -14,7 +14,7 @@ const FloatLeft = ({ toggle }) => {
     { icon: <MdEmail size={30} color="white" />, label: "Coffee", link: "/loans"},
     { icon: <MdMenu size={30} color="white" />, label: "Apple" },
     { icon: <BiUser size={30} color="white" />, label: "Android" },
-    { icon: <FaGithub size={30} color="white" />, label: "Github" },
+    { icon: <FaCode size={30} color="white" />, label: "Github" },
     { icon: <FaArrowUpFromGroundWater size={30} color="white" />, label: "Twitter" },
     { icon: <MdSettings size={30} color="white" />, label: "Facebook" },
   ];
