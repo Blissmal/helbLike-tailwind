@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import {FaAndroid, FaApple, FaBeer, FaCoffee, FaFacebook, FaGithub, FaHome, FaTwitter} from 'react-icons/fa';
+import { FaGithub, FaHome } from 'react-icons/fa';
 import propTypes from "prop-types"
 import { Link } from 'react-router-dom';
-import {FaArrowUpFromGroundWater, FaMessage} from "react-icons/fa6";
-import {MdEmail, MdMenu, MdSettings} from "react-icons/md";
-import {BiUser} from "react-icons/bi";
+import { FaArrowUpFromGroundWater } from "react-icons/fa6";
+import { MdEmail, MdMenu, MdSettings } from "react-icons/md";
+import { BiUser } from "react-icons/bi";
 
 const FloatLeft = ({ toggle }) => {
   const [selected, setSelected] = useState(null);
