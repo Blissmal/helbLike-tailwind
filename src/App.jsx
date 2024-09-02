@@ -31,7 +31,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="w-full flex flex-col font-poppins overflow-hidden">
-        <Nav toggle={toggle} setToggle={setToggle} />
+        <Nav setToggle={setToggle} />
         <div className="mt-0 flex bg-gray-200">
           <FloatLeft toggle={toggle} />
           <div className="flex-1 overflow-x-hidden">
