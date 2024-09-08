@@ -10,20 +10,31 @@ const FloatLeft = ({ toggle }) => {
   const [selected, setSelected] = useState(null);
 
   const icons = [
-    { icon: <FaHome size={30} color="white" />, label: "Beer", link: "/" },
+    { icon: <FaHome size={30} color="white" />,
+      label: "Beer",
+      link: "/"
+    },
     {
       icon: <MdEmail size={30} color="white" />,
       label: "Coffee",
       link: "/loans",
     },
-    { icon: <MdMenu size={30} color="white" />, label: "Apple" },
-    { icon: <BiUser size={30} color="white" />, label: "Android" },
-    { icon: <FaCode size={30} color="white" />, label: "Github" },
+    { icon: <MdMenu size={30} color="white" />,
+      label: "Apple"
+    },
+    { icon: <BiUser size={30} color="white" />,
+      label: "Android"
+    },
+    { icon: <FaCode size={30} color="white" />,
+      label: "Github"
+    },
     {
       icon: <FaArrowUpFromGroundWater size={30} color="white" />,
       label: "Twitter",
     },
-    { icon: <MdSettings size={30} color="white" />, label: "Facebook" },
+    { icon: <MdSettings size={30} color="white" />,
+      label: "Facebook",
+    },
   ];
 
   const handleClick = (index) => {
@@ -41,13 +52,13 @@ const FloatLeft = ({ toggle }) => {
           <li
             key={index}
             className={`flex ${
-              index === 1 && "mt-20"
-            } gap-2 pr-3 mt-5 items-center border-r-2 ${
+                (index === 2 || index === 3) ? "mt-20" : "mt-5"
+            } gap-2 pr-3 items-center border-r-2 ${
               selected === index ? " border-red-600" : "border-green-600"
             } transition-border duration-200`}
             onClick={() => handleClick(index)}
           >
-            <Link to={item.link}>
+            <Link to={item.link} className="flex items-center gap-2">
               <span>{item.icon}</span>
               {toggle && (
                 <span
