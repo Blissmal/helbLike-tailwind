@@ -7,6 +7,7 @@ import Loader from "./components/Loader";
 import Loans from "./pages/loans/Loans";
 import ViewLoansTab from "./pages/loans/ViewLoansTab";
 import Footer from "./components/Footer";
+import menuItems from "./items/menuItems";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -33,7 +34,7 @@ const App = () => {
       <div className="w-full flex flex-col font-poppins overflow-hidden">
         <Nav setToggle={setToggle} />
         <div className="mt-0 flex bg-gray-200">
-          <FloatLeft toggle={toggle} />
+          <FloatLeft toggle={toggle} menuItems={menuItems}/>
           <div className="flex-1 overflow-x-hidden">
             <Routes>
               <Route path="/" element={<Home />} />

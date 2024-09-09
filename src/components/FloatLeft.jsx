@@ -1,41 +1,9 @@
 import { useState } from "react";
-import { FaCode, FaHome } from "react-icons/fa";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { FaArrowUpFromGroundWater } from "react-icons/fa6";
-import { MdEmail, MdMenu, MdSettings } from "react-icons/md";
-import { BiUser } from "react-icons/bi";
 
-const FloatLeft = ({ toggle }) => {
+const FloatLeft = ({ toggle, menuItems }) => {
   const [selected, setSelected] = useState(null);
-
-  const icons = [
-    { icon: <FaHome size={30} color="white" />,
-      label: "Beer",
-      link: "/"
-    },
-    {
-      icon: <MdEmail size={30} color="white" />,
-      label: "Coffee",
-      link: "/loans",
-    },
-    { icon: <MdMenu size={30} color="white" />,
-      label: "Apple"
-    },
-    { icon: <BiUser size={30} color="white" />,
-      label: "Android"
-    },
-    { icon: <FaCode size={30} color="white" />,
-      label: "Github"
-    },
-    {
-      icon: <FaArrowUpFromGroundWater size={30} color="white" />,
-      label: "Twitter",
-    },
-    { icon: <MdSettings size={30} color="white" />,
-      label: "Facebook",
-    },
-  ];
 
   const handleClick = (index) => {
     setSelected(index);
@@ -48,25 +16,30 @@ const FloatLeft = ({ toggle }) => {
       } sm:block`}
     >
       <ul className="list-none h-screen">
-        {icons.map((item, index) => (
+        {menuItems.map((item, index) => (
           <li
             key={index}
             className={`flex ${
-                (index === 2 || index === 3) ? "mt-20" : "mt-5"
+              (index === 2 || index === 3) ? "mt-20" : "mt-5"
             } gap-2 pr-3 items-center border-r-2 ${
-              selected === index ? " border-red-600" : "border-green-600"
+              selected === index ? "border-red-600" : "border-green-600"
             } transition-border duration-200`}
             onClick={() => handleClick(index)}
           >
-            <Link to={item.link} className="flex items-center gap-2">
+            <Link
+              to={item.link || "#"}
+              className="flex justify-between items-center gap-2"
+              aria-label={item.label}
+            >
               <span>{item.icon}</span>
               {toggle && (
                 <span
-                  className={`font-bold ${
+                  className={`items-center flex gap-2 font-bold ${
                     selected === index ? "text-red-600" : "text-white"
                   } transition-colors duration-300`}
                 >
                   {item.label}
+                  {item.iconalt && <span className="text-red-600">{item.iconalt}</span>}
                 </span>
               )}
             </Link>
@@ -76,8 +49,17 @@ const FloatLeft = ({ toggle }) => {
     </div>
   );
 };
+
 FloatLeft.propTypes = {
-  toggle: propTypes.bool,
+  toggle: PropTypes.bool.isRequired,
+  menuItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.element.isRequired,
+      label: PropTypes.string.isRequired,
+      link: PropTypes.string,
+      iconalt: PropTypes.element,
+    })
+  ).isRequired,
 };
 
 export default FloatLeft;
