@@ -11,7 +11,7 @@ const FloatLeft = ({ toggle, menuItems }) => {
 
   return (
     <div
-      className={`relative w-max p-4 pr-0 border border-gray-300 bg-green-600 cursor-pointer ${
+      className={`relative w-max overflow-y-auto p-4 pr-0 border border-gray-300 bg-green-600 cursor-pointer ${
         toggle ? "flex" : "hidden"
       } sm:block`}
     >
@@ -20,7 +20,7 @@ const FloatLeft = ({ toggle, menuItems }) => {
           <li
             key={index}
             className={`flex ${
-              (index === 2 || index === 3) ? "mt-20" : "mt-5"
+              (index === 1 || index === 3 || index === 4 || index === 10) ? "mt-20" : "mt-5"
             } gap-2 pr-3 items-center border-r-2 ${
               selected === index ? "border-red-600" : "border-green-600"
             } transition-border duration-200`}

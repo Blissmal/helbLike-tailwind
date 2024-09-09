@@ -21,7 +21,7 @@ const menuItems = [
   {
     icon: <FaHome size={30} color="white" />,
     label: "Dashboard",
-    link: "/dashboard",
+    link: "/",
   },
   {
     icon: <FiColumns size={30} color="white" />,
