@@ -11,7 +11,7 @@ const FloatLeft = ({ toggle, menuItems }) => {
 
   return (
     <div
-      className={`relative w-max overflow-y-auto p-4 pr-0 border border-gray-300 bg-green-600 cursor-pointer ${
+      className={`relative w-max overflow-y-auto overflow-x-hidden p-4 pr-0 border border-gray-300 bg-green-600 cursor-pointer ${
         toggle ? "flex" : "hidden"
       } sm:block`}
     >
@@ -22,7 +22,7 @@ const FloatLeft = ({ toggle, menuItems }) => {
             className={`flex ${
               (index === 1 || index === 3 || index === 4 || index === 10) ? "mt-20" : "mt-5"
             } gap-2 pr-3 items-center border-r-2 ${
-              selected === index ? "border-red-600" : "border-green-600"
+              selected === index ? "border-orange-400" : "border-green-600"
             } transition-border duration-200`}
             onClick={() => handleClick(index)}
           >
@@ -35,11 +35,11 @@ const FloatLeft = ({ toggle, menuItems }) => {
               {toggle && (
                 <span
                   className={`items-center flex gap-2 font-bold ${
-                    selected === index ? "text-red-600" : "text-white"
+                    selected === index ? "text-orange-400" : "text-white"
                   } transition-colors duration-300`}
                 >
                   {item.label}
-                  {item.iconalt && <span className="text-red-600">{item.iconalt}</span>}
+                  {item.iconalt && <span className="text-orange-400">{item.iconalt}</span>}
                 </span>
               )}
             </Link>
