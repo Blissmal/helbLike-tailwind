@@ -12,7 +12,7 @@ import menuItems from "./items/menuItems";
 const App = () => {
   const [toggle, setToggle] = useState(false);
   const [load, setLoad] = useState(true);
-  const [newLOad, setNewLoad] = useState(true);
+  const [newLoad, setNewLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -46,7 +46,7 @@ const App = () => {
           <FloatLeft toggle={toggle} menuItems={menuItems}/>
           <div className="flex-1 overflow-x-hidden">
             { 
-              newLOad ? 
+              newLoad ? 
             <div className="flex justify-center items-center h-[100px]">
               <Loader />
             </div>
