@@ -1,6 +1,7 @@
 import Bliss from '../assets/bliss.jpg'
 import { BiMenu, BiMessage, BiNotification, BiSearch } from 'react-icons/bi'
 import propTypes from "prop-types"
+import Input from './Input'
 
 const Nav = ({ setToggle }) => {
   return (
@@ -9,10 +10,11 @@ const Nav = ({ setToggle }) => {
         <div className="p-2 rounded-full flex gap-2 items-center">
           <BiMenu className="text-2xl text-white cursor-pointer" onClick={() => setToggle(prev => !prev)} />
           <BiSearch className="text-2xl text-white lg:hidden" />
-          <div className='items-center relative hidden lg:flex'>
+          {/* <div className='items-center relative hidden lg:flex'>
             <input type="text" className='w-[400px] bg-blue-500 rounded-full outline-none p-2 text-white'/>
             <BiSearch className="text-2xl text-white absolute right-5 cursor-pointer" />
-          </div>
+          </div> */}
+          <Input />
         </div>
         <div className="flex items-center gap-2">
           <BiMessage className="text-2xl text-white" />
