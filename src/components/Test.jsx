@@ -53,7 +53,7 @@ export default function SidebarWithBurgerMenu() {
         <Card
           color="transparent"
           shadow={false}
-          className="h-[calc(100vh-2rem)] w-full p-4"
+          className="h-[calc(100vh-2rem)] w-full p-4 relative"
         >
           <div className="mb-2 flex items-center gap-4 p-4">
             {/* <img
