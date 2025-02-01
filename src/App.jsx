@@ -8,6 +8,7 @@ import Loans from "./pages/loans/Loans";
 import ViewLoansTab from "./pages/loans/ViewLoansTab";
 import Footer from "./components/Footer";
 import menuItems from "./items/menuItems";
+import SidebarWithBurgerMenu from "./components/Test";
 
 const App = () => {
   const [toggle, setToggle] = useState(false);
@@ -40,10 +41,11 @@ const App = () => {
 
   return (
     <BrowserRouter>
+    <SidebarWithBurgerMenu />
       <div className="w-full flex flex-col font-sans overflow-hidden">
         <Nav setToggle={setToggle} />
         <div className="mt-0 flex bg-gray-200">
-          <FloatLeft toggle={toggle} menuItems={menuItems}/>
+          {/* <FloatLeft toggle={toggle} menuItems={menuItems}/> */}
           <div className="flex-1 overflow-x-hidden">
             { 
               newLoad ? 
@@ -63,6 +65,9 @@ const App = () => {
       </div>
     </BrowserRouter>
   );
+  // return (
+  //   <SidebarWithBurgerMenu />
+  // );
 };
 
 export default App;
