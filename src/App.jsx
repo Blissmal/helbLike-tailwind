@@ -25,10 +25,10 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setNewLoad(false);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [load]);
 
   if (load) {
     return (
@@ -45,16 +45,17 @@ const App = () => {
         <div className="mt-0 flex bg-gray-200">
           <FloatLeft toggle={toggle} menuItems={menuItems}/>
           <div className="flex-1 overflow-x-hidden">
-            { newLOad ? 
-            <div className="flex justify-center items-center h-screen">
-            <Loader />
-          </div>
+            { 
+              newLOad ? 
+            <div className="flex justify-center items-center h-[100px]">
+              <Loader />
+            </div>
                : 
                <Routes>
-               <Route path="/" element={<Home />} />
-               <Route path="/loans" element={<Loans />} />
-               <Route path="/loans/viewLoan" element={<ViewLoansTab />} />
-             </Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/loans" element={<Loans />} />
+                <Route path="/loans/viewLoan" element={<ViewLoansTab />} />
+              </Routes>
             }
           </div>
         </div>
