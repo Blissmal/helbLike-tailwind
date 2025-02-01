@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   IconButton,
   Typography,
@@ -32,11 +32,12 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Nav from "./Nav";
+import Tooltip from "./Tooltip";
  
 export default function SidebarWithBurgerMenu() {
-  const [open, setOpen] = React.useState(0);
-  const [openAlert, setOpenAlert] = React.useState(true);
-  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
+  const [open, setOpen] = useState(0);
+  const [openAlert, setOpenAlert] = useState(true);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
  
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
@@ -47,13 +48,6 @@ export default function SidebarWithBurgerMenu() {
  
   return (
     <>
-      {/* <IconButton variant="text" size="lg" onClick={openDrawer}>
-        {isDrawerOpen ? (
-          <XMarkIcon className="h-8 w-8 stroke-2" />
-        ) : (
-          <Bars3Icon className="h-8 w-8 stroke-2" />
-        )}
-      </IconButton> */}
       <Nav isDrawerOpen={isDrawerOpen} openDrawer={openDrawer}/>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
         <Card
@@ -62,13 +56,13 @@ export default function SidebarWithBurgerMenu() {
           className="h-[calc(100vh-2rem)] w-full p-4"
         >
           <div className="mb-2 flex items-center gap-4 p-4">
-            <img
+            {/* <img
               src="https://docs.material-tailwind.com/img/logo-ct-dark.png"
               alt="brand"
               className="h-8 w-8"
-            />
+            /> */}
             <Typography variant="h5" color="blue-gray">
-              Sidebar
+              BLissmal Helb Clone
             </Typography>
           </div>
           <div className="p-2">
@@ -201,7 +195,7 @@ export default function SidebarWithBurgerMenu() {
               Log Out
             </ListItem>
           </List>
-          <Alert
+          {/* <Alert
             open={openAlert}
             className="mt-auto"
             onClose={() => setOpenAlert(false)}
@@ -233,7 +227,8 @@ export default function SidebarWithBurgerMenu() {
                 Upgrade Now
               </Typography>
             </div>
-          </Alert>
+          </Alert> */}
+          <Tooltip />
         </Card>
       </Drawer>
     </>
