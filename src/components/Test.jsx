@@ -31,6 +31,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import Nav from "./Nav";
  
 export default function SidebarWithBurgerMenu() {
   const [open, setOpen] = React.useState(0);
@@ -46,13 +47,14 @@ export default function SidebarWithBurgerMenu() {
  
   return (
     <>
-      <IconButton variant="text" size="lg" onClick={openDrawer}>
+      {/* <IconButton variant="text" size="lg" onClick={openDrawer}>
         {isDrawerOpen ? (
           <XMarkIcon className="h-8 w-8 stroke-2" />
         ) : (
           <Bars3Icon className="h-8 w-8 stroke-2" />
         )}
-      </IconButton>
+      </IconButton> */}
+      <Nav isDrawerOpen={isDrawerOpen} openDrawer={openDrawer}/>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
         <Card
           color="transparent"

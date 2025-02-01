@@ -2,13 +2,22 @@ import Bliss from '../assets/bliss.jpg'
 import { BiMenu, BiMessage, BiNotification, BiSearch } from 'react-icons/bi'
 import propTypes from "prop-types"
 import Input from './Input'
+import { IconButton } from '@material-tailwind/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
-const Nav = ({ setToggle }) => {
+const Nav = ({isDrawerOpen, openDrawer}) => {
   return (
     <div>
       <nav className="bg-blue-800 flex justify-between p-2 px-10 items-center h-24">
         <div className="p-2 rounded-full flex gap-2 items-center">
-          <BiMenu className="text-2xl text-white cursor-pointer" onClick={() => setToggle(prev => !prev)} />
+          {/* <BiMenu className="text-2xl text-white cursor-pointer" onClick={() => setToggle(prev => !prev)} /> */}
+          <IconButton variant="text" size="lg" onClick={openDrawer}>
+        {isDrawerOpen ? (
+          <XMarkIcon className="h-8 w-8 stroke-2" color='white'/>
+        ) : (
+          <Bars3Icon className="h-8 w-8 stroke-2" color='white'/>
+        )}
+      </IconButton>
           <BiSearch className="text-2xl text-white lg:hidden" />
           {/* <div className='items-center relative hidden lg:flex'>
             <input type="text" className='w-[400px] bg-blue-500 rounded-full outline-none p-2 text-white'/>

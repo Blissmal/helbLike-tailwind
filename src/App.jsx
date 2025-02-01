@@ -43,7 +43,7 @@ const App = () => {
     <BrowserRouter>
     <SidebarWithBurgerMenu />
       <div className="w-full flex flex-col font-sans overflow-hidden">
-        <Nav setToggle={setToggle} />
+        {/* <Nav setToggle={setToggle} /> */}
         <div className="mt-0 flex bg-gray-200">
           {/* <FloatLeft toggle={toggle} menuItems={menuItems}/> */}
           <div className="flex-1 overflow-x-hidden">
