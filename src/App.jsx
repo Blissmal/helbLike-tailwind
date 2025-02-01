@@ -12,11 +12,20 @@ import menuItems from "./items/menuItems";
 const App = () => {
   const [toggle, setToggle] = useState(false);
   const [load, setLoad] = useState(true);
+  const [newLOad, setNewLoad] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoad(false);
     }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setNewLoad(false);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -36,11 +45,17 @@ const App = () => {
         <div className="mt-0 flex bg-gray-200">
           <FloatLeft toggle={toggle} menuItems={menuItems}/>
           <div className="flex-1 overflow-x-hidden">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/loans" element={<Loans />} />
-              <Route path="/loans/viewLoan" element={<ViewLoansTab />} />
-            </Routes>
+            { newLOad ? 
+            <div className="flex justify-center items-center h-screen">
+            <Loader />
+          </div>
+               : 
+               <Routes>
+               <Route path="/" element={<Home />} />
+               <Route path="/loans" element={<Loans />} />
+               <Route path="/loans/viewLoan" element={<ViewLoansTab />} />
+             </Routes>
+            }
           </div>
         </div>
         <Footer />
