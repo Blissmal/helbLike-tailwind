@@ -19,10 +19,6 @@ const Nav = ({isDrawerOpen, openDrawer}) => {
         )}
       </IconButton>
           <BiSearch className="text-2xl text-white lg:hidden" />
-          {/* <div className='items-center relative hidden lg:flex'>
-            <input type="text" className='w-[400px] bg-blue-500 rounded-full outline-none p-2 text-white'/>
-            <BiSearch className="text-2xl text-white absolute right-5 cursor-pointer" />
-          </div> */}
           <Input />
         </div>
         <div className="flex items-center gap-2">
