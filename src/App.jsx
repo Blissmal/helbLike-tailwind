@@ -43,9 +43,9 @@ const App = () => {
     <BrowserRouter>
     <SidebarWithBurgerMenu />
       <div className="w-full flex flex-col font-sans overflow-hidden">
-        {/* <Nav setToggle={setToggle} /> */}
+        {/* <Nav setToggle={setToggle} /> SIdebar control deleted*/}
         <div className="mt-0 flex bg-gray-200">
-          {/* <FloatLeft toggle={toggle} menuItems={menuItems}/> */}
+          {/* <FloatLeft toggle={toggle} menuItems={menuItems}/> Deleted sidebar section */}
           <div className="flex-1 overflow-x-hidden">
             { 
               newLoad ? 
